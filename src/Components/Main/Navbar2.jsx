@@ -1,14 +1,14 @@
 import { Bell, Search, Menu, X } from 'lucide-react' // Добавил X для закрытия
 import React, { useState } from 'react'
 import Marquee from 'react-fast-marquee'
-import {  NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     // 1. Создаем состояние для открытия/закрытия
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='relative flex flex-col bg-linear-to-b  from-[#000000] to-[rgba(0,0,0,0.8)]'>
+        <div className='relative flex flex-col bg-[#0d0d0d]'>
             <nav className='flex px-[20px] md:px-[80px] justify-between py-[20px] w-full items-center z-50'>
                 <div>
                     <a className='bg-transparent' href="/">
@@ -18,22 +18,22 @@ const Navbar = () => {
 
                 {/* Desktop Menu (без изменений) */}
                 <ul className='hidden md:flex px-[5px] py-[13px] bg-black items-center justify-between rounded-[9px] gap-[10px]'>
-         <li><NavLink to="/" className={({isActive}) =>
-               isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
-               : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
-             }>Home</NavLink></li>
-                             <li><NavLink to="/movies" className={({isActive}) =>
-               isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
-               : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
-             }>Movies & Shows</NavLink></li>
-                             <li><NavLink to="/support" className={({isActive}) =>
-               isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
-               : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
-             }>Support</NavLink></li>
-                             <li><NavLink to="/subscription" className={({isActive}) =>
-               isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
-               : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
-             }>Subscription</NavLink></li>
+                    <li><NavLink to="/" className={({isActive}) =>
+      isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
+      : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
+    }>Home</NavLink></li>
+                    <li><NavLink to="/movies" className={({isActive}) =>
+      isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
+      : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
+    }>Movies & Shows</NavLink></li>
+                    <li><NavLink to="/support" className={({isActive}) =>
+      isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
+      : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
+    }>Support</NavLink></li>
+                    <li><NavLink to="/subscription" className={({isActive}) =>
+      isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
+      : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
+    }>Subscription</NavLink></li>
                 </ul>
 
                 <div className='flex gap-[15px] items-center'>
@@ -61,12 +61,7 @@ const Navbar = () => {
             </nav>
 
             {/* Background Marquee (абсолютное позиционирование) */}
-            <div className='absolute inset-0 z-[-1] h-[100vh] overflow-hidden opacity-40 md:opacity-100'>
-                <Marquee><img src="/public/Image Container.png" alt="" /></Marquee>
-                <Marquee direction='right'><img src="/Image Container (1).png" alt="" /></Marquee>
-                <Marquee><img src="/Image Container (3).png" alt="" /></Marquee>
-                <Marquee direction='right'><img src="/Image Container (4).png" alt="" /></Marquee>
-            </div>
+            
         </div>
     )
 }

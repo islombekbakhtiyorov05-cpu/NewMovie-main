@@ -28,7 +28,7 @@ const Plan = () => {
                                         </div>
                                         <div className='w-[100%] gap-y-[20px] mt-[40px] md:flex justify-between'>
                                             <button className=' w-[100%] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-black'>Start Free Trial</button>
-                                            <button className='w-[100%] mt-[20px] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
+                                            <button className='w-[100%] mt-[20px] md:mt-0 md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
                                         </div>
                                     </div>
                                     <div className='mt-[20px] bg-[rgba(26,26,26,1)] w-[100%] md:w-[30%] p-[40px] rounded-[9px] border-[1px] border-[rgba(38,38,38,1)] '>
@@ -39,7 +39,7 @@ const Plan = () => {
                                         </div>
                                         <div className='w-[100%] gap-y-[20px] mt-[40px] md:flex justify-between'>
                                             <button className=' w-[100%] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-black'>Start Free Trial</button>
-                                            <button className='w-[100%] mt-[20px] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
+                                            <button className='w-[100%] mt-[20px] md:mt-0 md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
                                         </div>
                                     </div>
                                     <div className='mt-[20px] bg-[rgba(26,26,26,1)] w-[100%] md:w-[30%] p-[40px] rounded-[9px] border-[1px] border-[rgba(38,38,38,1)] '>
@@ -50,7 +50,7 @@ const Plan = () => {
                                         </div>
                                         <div className='w-[100%] gap-y-[20px] mt-[40px] md:flex justify-between'>
                                             <button className=' w-[100%] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-black'>Start Free Trial</button>
-                                            <button className='w-[100%] mt-[20px] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
+                                            <button className='w-[100%] mt-[20px] md:mt-0 md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
                                         </div>
                                     </div>
                                     </div>
@@ -69,7 +69,7 @@ const Plan = () => {
                                         </div>
                                         <div className='w-[100%] gap-y-[20px] mt-[40px] md:flex justify-between'>
                                             <button className=' w-[100%] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-black'>Start Free Trial</button>
-                                            <button className='w-[100%] mt-[20px] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
+                                            <button className='w-[100%] mt-[20px] md:mt-0 md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
                                         </div>
                                     </div>
                                     <div className='mt-[20px] bg-[rgba(26,26,26,1)] w-[100%] md:w-[30%] p-[40px] rounded-[9px] border-[1px] border-[rgba(38,38,38,1)] '>
@@ -80,7 +80,7 @@ const Plan = () => {
                                         </div>
                                         <div className='w-[100%] gap-y-[20px] mt-[40px] md:flex justify-between'>
                                             <button className=' w-[100%] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-black'>Start Free Trial</button>
-                                            <button className='w-[100%] mt-[20px] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
+                                            <button className='w-[100%] mt-[20px] md:mt-0 md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
                                         </div>
                                     </div>
                                     <div className='mt-[20px] bg-[rgba(26,26,26,1)] w-[100%] md:w-[30%] p-[40px] rounded-[9px] border-[1px] border-[rgba(38,38,38,1)] '>
@@ -91,7 +91,7 @@ const Plan = () => {
                                         </div>
                                         <div className='w-[100%] gap-y-[20px] mt-[40px] md:flex justify-between'>
                                             <button className=' w-[100%] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-black'>Start Free Trial</button>
-                                            <button className='w-[100%] mt-[20px] md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
+                                            <button className='w-[100%] mt-[20px] md:mt-0 md:w-[48%] px-[20px] py-[14px] text-[14px] text-white font-semibold rounded-[9px] bg-[rgba(229,0,0,1)]'>Choose Plan</button>
                                         </div>
                                     </div>
                                     </div>
