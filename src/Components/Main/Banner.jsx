@@ -2,14 +2,14 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-16 py-12 bg-[#0d0d0d]">
+    <div className="w-full px-4 sm:px-8 lg:px-16 py-22  bg-[#0d0d0d]">
       
       <div
         style={{ backgroundImage: "url('/Background Images.png')" }}
         className="flex flex-col lg:flex-row items-start lg:items-center justify-between
         gap-6 px-6 sm:px-10 lg:px-14
         py-10
-        min-h-[260px] lg:min-h-[355px]
+        min-h-[260px] lg:min-h-[305px]
         bg-cover bg-center rounded-xl"
       >
         

@@ -8,7 +8,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='relative flex flex-col bg-[#0d0d0d]'>
+        <div className='relative flex flex-col bg-[#0d0d0d] w-[100%]'>
             <nav className='flex px-[20px] md:px-[80px] justify-between py-[20px] w-full items-center z-50'>
                 <div>
                     <a className='bg-transparent' href="/">
@@ -17,32 +17,36 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu (без изменений) */}
-                <ul className='hidden md:flex px-[5px] py-[13px] bg-black items-center justify-between rounded-[9px] gap-[10px]'>
-                    <li><NavLink to="/" className={({isActive}) =>
-      isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
-      : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
-    }>Home</NavLink></li>
-                    <li><NavLink to="/movies" className={({isActive}) =>
-      isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
-      : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
-    }>Movies & Shows</NavLink></li>
-                    <li><NavLink to="/support" className={({isActive}) =>
-      isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
-      : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
-    }>Support</NavLink></li>
-                    <li><NavLink to="/subscription" className={({isActive}) =>
-      isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
-      : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
-    }>Subscription</NavLink></li>
+                <ul className='hidden md:flex px-[5px] py-[13px] bg-black items-center justify-between rounded-[9px] gap-[10px] border-[1px] border-[rgba(38,38,38,1)]'>
+                    <li><NavLink to="/" className={({ isActive }) =>
+                        isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
+                            : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
+                    }>Home</NavLink></li>
+                    <li><NavLink to="/movies" className={({ isActive }) =>
+                        isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
+                            : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
+                    }>Movies & Shows</NavLink></li>
+                    <li><NavLink to="/support" className={({ isActive }) =>
+                        isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
+                            : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
+                    }>Support</NavLink></li>
+                    <li><NavLink to="/subscription" className={({ isActive }) =>
+                        isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
+                            : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
+                    }>Subscription</NavLink></li>
+                    <li><NavLink to="/register" className={({ isActive }) =>
+                        isActive ? "text-[rgba(191,191,191,1)] text-[14px] bg-[#1a1a1a] p-[10px] rounded-[9px]"
+                            : "text-[rgba(191,191,191,1)] text-[14px] p-[10px] rounded-[9px]"
+                    }>Sign In</NavLink></li>
                 </ul>
 
                 <div className='flex gap-[15px] items-center'>
                     <Search color='white' className='cursor-pointer' size={20} />
                     <Bell color="#ffffff" className='cursor-pointer' size={20} />
-                    
+
                     {/* 2. Кнопка бургер (видна только на мобилках) */}
-                    <button 
-                        className='md:hidden text-white z-50' 
+                    <button
+                        className='md:hidden text-white z-50'
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -61,7 +65,7 @@ const Navbar = () => {
             </nav>
 
             {/* Background Marquee (абсолютное позиционирование) */}
-            
+
         </div>
     )
 }

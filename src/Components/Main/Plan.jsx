@@ -19,7 +19,7 @@ const Plan = () => {
                         <Tab key="monthly" title="Monthly">
                             <Card>
                                 <CardBody className='mt-[50px]'>
-                                    <div className='md:flex gap-[20px] gap-y-[20px]  w-[100%]  justify-between'>
+                                    <div className='md:flex md:justify-between gap-[20px] gap-y-[20px]  w-[100%]  '>
                                         <div className='mt-[20px] bg-[rgba(26,26,26,1)] w-[100%] md:w-[30%] p-[40px] rounded-[9px] border-[1px] border-[rgba(38,38,38,1)] '>
                                         <div>
                                             <h1 className='text-[20px] text-white font-bold'>Basic Plan</h1>
@@ -60,7 +60,7 @@ const Plan = () => {
                         <Tab key="annually" title="Annually">
                             <Card>
                                 <CardBody className=' mt-[50px]'>
-                                    <div className='md:flex gap-[20px] gap-y-[20px]  w-[100%]  justify-between'>
+                                    <div className='md:flex md:justify-between gap-[20px] gap-y-[20px]  w-[100%] '>
                                         <div className='mt-[20px] bg-[rgba(26,26,26,1)] w-[100%] md:w-[30%] p-[40px] rounded-[9px] border-[1px] border-[rgba(38,38,38,1)] '>
                                         <div>
                                             <h1 className='text-[20px] text-white font-bold'>Basic Plan</h1>

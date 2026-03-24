@@ -29,27 +29,27 @@ const Questions = () => {
                         trigger: "flex w-full h-full justify-between items-center",
                         indicator: "ml-auto text-[22px] md:text-[26px] text-white",
                         titleWrapper: "flex-1 w-full",
-                        title: "w-full text-left text-white pl-[10px] md:pl-[20px] text-[16px] md:text-[20px] font-medium",
+                        title: "w-full text-left text-white pl-[10px] md:pl-[20px] text-[16px] md:text-[20px] font-medium py-[15px]",
                         startContent: "px-[12px] md:px-[16px] py-[8px] md:py-[12px] text-white text-[14px] md:text-[16px] font-semibold bg-[rgba(31,31,31,1)] rounded-[9px]"
                     }}
                 >
-                    <AccordionItem key="1" startContent={<h1>01</h1>} title="What is StreamVibe?">
-                        <p className='ml-[50px] md:ml-[65px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] mt-[15px]'>
+                    <AccordionItem key="1" startContent={<h1>01</h1>}  title="What is StreamVibe?">
+                        <p className=' ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             StreamVibe is a streaming service that allows you to watch movies and shows on demand.
                         </p>
                     </AccordionItem>
                     <AccordionItem key="2" startContent={<h1>02</h1>} title="How much does StreamVibe cost?">
-                        <p className='ml-[50px] md:ml-[65px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] mt-[15px]'>
+                        <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             StreamVibe offers various plans to fit your needs, starting from budget-friendly options.
                         </p>
                     </AccordionItem>
                     <AccordionItem key="3" startContent={<h1>03</h1>} title="What content is available?">
-                        <p className='ml-[50px] md:ml-[65px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] mt-[15px]'>
+                        <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             You can enjoy a wide variety of movies, TV shows, and exclusive originals.
                         </p>
                     </AccordionItem>
                     <AccordionItem key="4" startContent={<h1>04</h1>} title="How can I watch StreamVibe?">
-                        <p className='ml-[50px] md:ml-[65px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] mt-[15px]'>
+                        <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             Watch on your TV, smartphone, tablet, or laptop via our app or website.
                         </p>
                     </AccordionItem>
@@ -64,27 +64,27 @@ const Questions = () => {
                         trigger: "flex w-full h-full justify-between items-center",
                         indicator: "ml-auto text-[22px] md:text-[26px] text-white",
                         titleWrapper: "flex-1 w-full",
-                        title: "w-full text-left text-white pl-[10px] md:pl-[20px] text-[16px] md:text-[20px] font-medium",
+                        title: "w-full text-left text-white pl-[10px] md:pl-[20px] text-[16px] md:text-[20px] font-medium md:py-[15px]",
                         startContent: "px-[12px] md:px-[16px] py-[8px] md:py-[12px] text-white text-[14px] md:text-[16px] font-semibold bg-[rgba(31,31,31,1)] rounded-[9px]"
                     }}
                 >
                     <AccordionItem key="5" startContent={<h1>05</h1>} title="How do I sign up?">
-                        <p className='ml-[50px] md:ml-[65px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] mt-[15px]'>
+                        <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             Visit our website or download the app and follow the registration steps.
                         </p>
                     </AccordionItem>
                     <AccordionItem key="6" startContent={<h1>06</h1>} title="What is the free trial?">
-                        <p className='ml-[50px] md:ml-[65px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] mt-[15px]'>
+                        <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             New users can enjoy a 7-day free trial to explore all features.
                         </p>
                     </AccordionItem>
                     <AccordionItem key="7" startContent={<h1>07</h1>} title="How to contact support?">
-                        <p className='ml-[50px] md:ml-[65px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] mt-[15px]'>
+                        <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             Our support team is available 24/7 via chat or email.
                         </p>
                     </AccordionItem>
                     <AccordionItem key="8" startContent={<h1>08</h1>} title="What are payment methods?">
-                        <p className='ml-[50px] md:ml-[65px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] mt-[15px]'>
+                        <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             We accept credit cards, PayPal, and various digital wallets.
                         </p>
                     </AccordionItem>

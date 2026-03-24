@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,8 +10,36 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Navigation } from 'swiper/modules';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import {Link} from 'react-router-dom'
+
+
+
+
 
 const Slider = () => {
+    
+//     let Base_Url = "https://api.themoviedb.org/3/trending/movie/week"
+//     let Api_Key = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZjkxOTNiNzkzNTBlOTliNGFhNjNkZjRmN2JlYjdmYyIsIm5iZiI6MTc1MjA0OTc0OC45OCwic3ViIjoiNjg2ZTI4NTQ5MmJjYzRiYWRlNmU4Yzg5Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.vG6XZs3MsR0-kOOz1FQPxF2Zu0Ddw4rnkw7PCS9D9AI'
+// const [data, setdata] = useState([])    
+
+// const GetAPI = async () => {
+//     const response = await fetch (Base_Url , {
+//         headers:{
+//             Authorization: Api_Key
+//         }
+//     })
+//     const datas = await response.json()
+// setdata(datas.results)
+   
+    
+// }
+
+// useEffect(() => {
+// GetAPI()
+// } ,[])
+
+
+
     const data = [
         { id: "1", img: "https://m.media-amazon.com/images/M/MV5BODUyZjkxZDMtZGI3ZC00ZmEwLTgwMTUtYTU4OTQ5YjU4ZjRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", title: "Bullet Train" },
         { id: "2", img: "https://m.media-amazon.com/images/M/MV5BODcyMDA5OGQtNTExYi00OGIwLWIyYWUtNWFlZDg0MTMyYmE2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", title: "Nice Guys" },
@@ -70,7 +98,10 @@ const Slider = () => {
                 className="mySwiper mt-[30px] md:mt-[50px]"
             >
                 {data.map((item) => (
+                    
+                    
                     <SwiperSlide key={item.id}>
+                        <Link to={'/inside'}>
                         <div className='bg-[#1a1a1a] p-3 md:p-4 rounded-[12px] border border-[#262626]'>
                             <div className='h-[200px] md:h-[350px] overflow-hidden rounded-[8px]'>
                                 <img 
@@ -82,10 +113,15 @@ const Slider = () => {
                             <h1 className='text-[16px] md:text-[20px] mt-[15px] md:mt-[20px] text-white font-medium truncate'>
                                 {item.title}
                             </h1>
-                        </div>
+                        </div></Link>
                     </SwiperSlide>
+                    
                 ))}
+               
+                
             </Swiper>
+           
+            
         </div>
     );
 };
