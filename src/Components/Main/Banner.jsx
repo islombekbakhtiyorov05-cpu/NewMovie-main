@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-16 py-22  bg-[#0d0d0d]">
+    <div className="w-full px-4 sm:px-8 lg:px-[80px] py-22  bg-[#0d0d0d]">
       
       <div
         style={{ backgroundImage: "url('/Background Images.png')" }}

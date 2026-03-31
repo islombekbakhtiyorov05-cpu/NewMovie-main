@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Accordion, AccordionItem } from "@heroui/accordion";
 
 const Questions = () => {
+
+    const [openKey, setOpenKey] = useState("1");
+
     return (
         <div id='questions' className='px-[20px] md:px-[80px] bg-[#0f0e0e] py-[40px] md:py-[60px] w-full'>
             <div className='mb-[30px] md:mb-[50px]'>
@@ -20,10 +23,16 @@ const Questions = () => {
 
             {/* Контейнер для аккордеонов: flex-col для мобилок, flex-row для ПК */}
             <div className='flex flex-col md:flex-row w-full gap-0 md:gap-[20px]'>
-                <Accordion 
+                <Accordion
                     selectionMode="single"
                     variant='splitted'
+                    hideIndicator
                     className="w-full md:w-1/2 p-0"
+                    selectedKeys={[openKey]}
+                    onSelectionChange={(keys) => {
+                        setOpenKey([...keys][0]);
+                    }}
+                    
                     itemClasses={{
                         base: "border-b border-[rgba(38,38,38,1)] hover:border-red-500 w-full px-0 md:px-[10px] py-6 md:py-10 !m-0 outline-none transition-all",
                         trigger: "flex w-full h-full justify-between items-center",
@@ -33,32 +42,69 @@ const Questions = () => {
                         startContent: "px-[12px] md:px-[16px] py-[8px] md:py-[12px] text-white text-[14px] md:text-[16px] font-semibold bg-[rgba(31,31,31,1)] rounded-[9px]"
                     }}
                 >
-                    <AccordionItem key="1" startContent={<h1>01</h1>}  title="What is StreamVibe?">
+                    <AccordionItem key="1" 
+                    startContent={<h1>01</h1>}
+                        title=
+                        {
+                            <div className="flex justify-between w-full items-center">
+                                <span>What is StreamVibe?</span>
+                                <span className="text-[22px] md:text-[26px] text-white">
+                                    {openKey === "1" ? "−" : "+"}
+                                </span>
+                            </div>
+                        }
+                    >
                         <p className=' ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             StreamVibe is a streaming service that allows you to watch movies and shows on demand.
                         </p>
                     </AccordionItem>
-                    <AccordionItem key="2" startContent={<h1>02</h1>} title="How much does StreamVibe cost?">
+                    <AccordionItem key="2" startContent={<h1>02</h1>} title={
+                            <div className="flex justify-between w-full items-center">
+                                <span>How much does the Streamvibe cost?</span>
+                                <span className="text-[22px] md:text-[26px] text-white">
+                                    {openKey === "2" ? "−" : "+"}
+                                </span>
+                            </div>
+                        }>
                         <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             StreamVibe offers various plans to fit your needs, starting from budget-friendly options.
                         </p>
                     </AccordionItem>
-                    <AccordionItem key="3" startContent={<h1>03</h1>} title="What content is available?">
+                    <AccordionItem key="3" startContent={<h1>03</h1>} title={
+                            <div className="flex justify-between w-full items-center">
+                                <span>What content is available?</span>
+                                <span className="text-[22px] md:text-[26px] text-white">
+                                    {openKey === "3" ? "−" : "+"}
+                                </span>
+                            </div>
+                        }>
                         <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             You can enjoy a wide variety of movies, TV shows, and exclusive originals.
                         </p>
                     </AccordionItem>
-                    <AccordionItem key="4" startContent={<h1>04</h1>} title="How can I watch StreamVibe?">
+                    <AccordionItem key="4" startContent={<h1>04</h1>} title={
+                            <div className="flex justify-between w-full items-center">
+                                <span>How can I watch Streamvibe?</span>
+                                <span className="text-[22px] md:text-[26px] text-white">
+                                    {openKey === "4" ? "−" : "+"}
+                                </span>
+                            </div>
+                        }>
                         <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             Watch on your TV, smartphone, tablet, or laptop via our app or website.
                         </p>
                     </AccordionItem>
                 </Accordion>
 
-                <Accordion 
+                <Accordion
                     selectionMode="single"
                     variant='splitted'
+                    hideIndicator
                     className="w-full md:w-1/2 p-0"
+                    selectedKeys={[openKey]}
+                    onSelectionChange={(keys) => {
+                        setOpenKey([...keys][0]);
+                    }}
                     itemClasses={{
                         base: "border-b border-[rgba(38,38,38,1)] hover:border-red-500 w-full px-0 md:px-[10px] py-6 md:py-10 !m-0 outline-none transition-all",
                         trigger: "flex w-full h-full justify-between items-center",
@@ -68,22 +114,50 @@ const Questions = () => {
                         startContent: "px-[12px] md:px-[16px] py-[8px] md:py-[12px] text-white text-[14px] md:text-[16px] font-semibold bg-[rgba(31,31,31,1)] rounded-[9px]"
                     }}
                 >
-                    <AccordionItem key="5" startContent={<h1>05</h1>} title="How do I sign up?">
+                    <AccordionItem key="5" startContent={<h1>05</h1>} title={
+                            <div className="flex justify-between w-full items-center">
+                                <span>How do I sign up?</span>
+                                <span className="text-[22px] md:text-[26px] text-white">
+                                    {openKey === "5" ? "−" : "+"}
+                                </span>
+                            </div>
+                        }>
                         <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             Visit our website or download the app and follow the registration steps.
                         </p>
                     </AccordionItem>
-                    <AccordionItem key="6" startContent={<h1>06</h1>} title="What is the free trial?">
+                    <AccordionItem key="6" startContent={<h1>06</h1>} title={
+                            <div className="flex justify-between w-full items-center">
+                                <span>What is free trial?</span>
+                                <span className="text-[22px] md:text-[26px] text-white">
+                                    {openKey === "6" ? "−" : "+"}
+                                </span>
+                            </div>
+                        }>
                         <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             New users can enjoy a 7-day free trial to explore all features.
                         </p>
                     </AccordionItem>
-                    <AccordionItem key="7" startContent={<h1>07</h1>} title="How to contact support?">
+                    <AccordionItem key="7" startContent={<h1>07</h1>} title={
+                            <div className="flex justify-between w-full items-center">
+                                <span>How to contact support?</span>
+                                <span className="text-[22px] md:text-[26px] text-white">
+                                    {openKey === "7" ? "−" : "+"}
+                                </span>
+                            </div>
+                        }>
                         <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             Our support team is available 24/7 via chat or email.
                         </p>
                     </AccordionItem>
-                    <AccordionItem key="8" startContent={<h1>08</h1>} title="What are payment methods?">
+                    <AccordionItem key="8" startContent={<h1>08</h1>} title={
+                            <div className="flex justify-between w-full items-center">
+                                <span>What are payment methods?</span>
+                                <span className="text-[22px] md:text-[26px] text-white">
+                                    {openKey === "8" ? "−" : "+"}
+                                </span>
+                            </div>
+                        }>
                         <p className='ml-[50px] md:ml-[75px] text-[14px] md:text-[16px] text-[rgba(153,153,153,1)] w-[90%] md:w-[80%] '>
                             We accept credit cards, PayPal, and various digital wallets.
                         </p>

@@ -8,11 +8,11 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='relative flex flex-col bg-[#0d0d0d] w-[100%]'>
-            <nav className='flex px-[20px] md:px-[80px] justify-between py-[20px] w-full items-center z-50'>
+        <div className='relative flex flex-col bg-[#0d0d0d] w-[100%] pt-[10px] pb-[40px]'>
+            <nav className='flex px-[20px] md:px-[80px] justify-between py-[20px] w-full items-center z-50 fixed '>
                 <div>
                     <a className='bg-transparent' href="/">
-                        <img src="/Logo (1).png" alt="Logo" className='h-[24px] md:h-auto' />
+                        <img src="/Logo (1).png" alt="Logo" className='h-[34px] md:h-auto' />
                     </a>
                 </div>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
                 </ul>
 
                 <div className='flex gap-[15px] items-center'>
-                    <Search color='white' className='cursor-pointer' size={20} />
+                    <Link to='/search'><Search color='white' className='cursor-pointer' size={20} /></Link>
                     <Bell color="#ffffff" className='cursor-pointer' size={20} />
 
                     {/* 2. Кнопка бургер (видна только на мобилках) */}
@@ -55,11 +55,12 @@ const Navbar = () => {
 
                 {/* 3. Мобильное меню (появляется только если isOpen === true) */}
                 {isOpen && (
-                    <div className='absolute top-full left-0 w-full bg-black/95 backdrop-blur-md flex flex-col items-start py-10 gap-6 md:hidden border-b border-white/10 shadow-2xl'>
-                        <a className='text-white text-lg' href="" onClick={() => setIsOpen(false)}>Home</a>
-                        <a className='text-white text-lg' href="" onClick={() => setIsOpen(false)}>Movies & Shows</a>
-                        <a className='text-white text-lg' href="" onClick={() => setIsOpen(false)}>Support</a>
-                        <a className='text-white text-lg' href="" onClick={() => setIsOpen(false)}>Subscriptions</a>
+                    <div className='absolute top-full left-0 w-full h-[90vh] pl-[20px] bg-black/95 backdrop-blur-md flex flex-col items-start py-10 gap-6 md:hidden border-b border-white/10 shadow-2xl'>
+                        <Link to="/"><a className='text-white text-lg' href="" onClick={() => setIsOpen(false)}>Home</a></Link>
+                        <Link to="/movies"><a className='text-white text-lg' href="" onClick={() => setIsOpen(false)}>Movies & Shows</a></Link>
+                        <Link to="/support"><a className='text-white text-lg' href="" onClick={() => setIsOpen(false)}>Support</a></Link>
+                        <Link to="/subscription"><a className='text-white text-lg' href="" onClick={() => setIsOpen(false)}>Subscription</a></Link>
+                        <Link to="/register"><a className='text-white text-lg' href="" onClick={() => setIsOpen(false)}>Sign In</a></Link>
                     </div>
                 )}
             </nav>

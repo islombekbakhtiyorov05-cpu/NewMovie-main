@@ -7,6 +7,8 @@ import Movies from '../Pages/Movies'
 import Movie_inside from "../Pages/Movie_inside"
 import Sign_in from '../Pages/Sign_in'
 import Actor_info from '../Pages/Actor_info'
+import Searching from '../Pages/Searching'
+
 function App() {
 
   return (
@@ -16,9 +18,10 @@ function App() {
     <Route path='/support' element={<Support/>}/>
     <Route path='/subscription' element={<Subscription/>}/>
     <Route path='/movies' element={<Movies/>}/>
-    <Route path='/inside' element={<Movie_inside/>}/>
+    <Route path='/movie/:id' element={<Movie_inside/>}/>
     <Route path='/register' element={<Sign_in/>}/>
-    <Route path='/actor_info' element={<Actor_info/>}/>
+    <Route path='/actor_info/:id' element={<Actor_info/>}/>
+    <Route path='/search' element={<Searching/>}/>
   </Routes>
   </BrowserRouter>
   )

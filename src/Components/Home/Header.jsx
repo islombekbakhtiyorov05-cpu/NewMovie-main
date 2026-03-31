@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Marquee from 'react-fast-marquee'
+import Api_Service from '../Service/Api_Service'
 
 const Header = () => {
+
+const [staticMovies, setStaticMovies] = useState()  
+
+  const getApi = async () => {
+    const responce = await Api_Service.getData("trending/movie/week")
+    console.log(responce);
+    
+  }
+  useEffect(() => {
+    getApi()
+  }, [])
+
     return (
-        <div className='w-full min-h-[95vh] bg-linear-to-b from-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.9)] flex flex-col items-center overflow-hidden'>
+        <div className='w-full min-h-[95vh] bg-linear-to-b from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,1)] flex flex-col items-center overflow-hidden pt-[60px]'>
            
             <div className='mt-[60px] md:mt-[60px]'>
                 <img 
@@ -30,6 +44,7 @@ const Header = () => {
                     Start Watching Now
                 </button>
             </div>
+             
         </div>
     )
 }

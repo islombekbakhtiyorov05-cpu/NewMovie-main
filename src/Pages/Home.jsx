@@ -13,7 +13,7 @@ const Home = () => {
     <div >
         <Navbar/>
         <Header/>
-        <Slider/>
+        <Slider url={"movie/popular"} title={"Explore variety of categories"} description={"Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new"}/>
         <Devices/>
         <Questions/>
         <Plan/>
