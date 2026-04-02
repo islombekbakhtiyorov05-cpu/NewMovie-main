@@ -21,10 +21,20 @@ const Navbar = () => {
     useEffect(() => {
         getApi()
     }, [])
+     const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50) // 50px — порог
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
     return (
-        <div className='relative flex flex-col bg-linear-to-b  from-[rgba(0,0,0,0.2)] to-[rgba(0,0,0,0.3)] pt-[10px] '>
-            <nav className='flex px-[20px] md:px-[80px] justify-between py-[20px] w-full items-center z-20 fixed'>
+        <div className='relative flex flex-col bg-linear-to-b  from-[rgba(0,0,0,0.2)] to-[rgba(0,0,0,0.3)]  '>
+            <nav className={`flex px-[20px] md:px-[80px] justify-between py-[20px] w-full items-center z-20 fixed ${scrolled ? 'bg-[#0d0d0d]' : 'bg-transparent'} transition-all duration-300`}>
                 <div>
                     <a className='bg-transparent' href="/">
                         <img src="/Logo (1).png" alt="Logo" className='h-[34px] md:h-auto' />

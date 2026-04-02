@@ -1,15 +1,26 @@
 import { Bell, Search, Menu, X } from 'lucide-react' // Добавил X для закрытия
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Marquee from 'react-fast-marquee'
 import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     // 1. Создаем состояние для открытия/закрытия
     const [isOpen, setIsOpen] = useState(false);
+     const [scrolled, setScrolled] = useState(false)
+    
+      useEffect(() => {
+        const handleScroll = () => {
+          setScrolled(window.scrollY > 50) // 50px — порог
+        }
+    
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+      }, [])
+    
 
     return (
-        <div className='relative flex flex-col bg-[#0d0d0d] w-[100%] pt-[10px] pb-[40px]'>
-            <nav className='flex px-[20px] md:px-[80px] justify-between py-[20px] w-full items-center z-50 fixed '>
+        <div className='relative flex flex-col bg-[#0d0d0d] w-[100%]  pb-[40px]'>
+            <nav className={`flex px-[20px] md:px-[80px] justify-between py-[20px] w-full items-center z-20 fixed ${scrolled ? 'bg-[#0d0d0d]' : 'bg-transparent'} transition-all duration-300`}>
                 <div>
                     <a className='bg-transparent' href="/">
                         <img src="/Logo (1).png" alt="Logo" className='h-[34px] md:h-auto' />
