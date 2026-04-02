@@ -10,7 +10,7 @@ const Plan = () => {
                     <p className='text-[16px] font-regular text-[rgba(153,153,153,1)] mt-[20px]'>Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop <br /> entertainment!</p>
                     <Tabs classNames={{
 
-                        tabList: "bg-[#0F0F0F] border-[#262626] rounded-[10px] p-1",
+                        tabList: "bg-[#0F0F0F] border-[#262626] rounded-[10px] p-1 w-[200px]",
                         cursor: "bg-[#1F1F1F] rounded-[8px] shadow-none",
                         tab: "px-[10px] w-[100px] h-[40px]",
                         tabContent: "group-data-[selected=true]:text-white text-[#999999] font-medium"
