@@ -40,7 +40,7 @@ const Banner = ({Movie}) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
           <div className="absolute w-full inset-0 flex flex-col items-center justify-end p-[16px] md:p-[40px] text-white">
 
-            <h1 className="text-[20px] md:text-3xl font-bold text-center">{Movie?.title}</h1>
+            <h1 className="text-[20px] md:text-3xl font-bold text-center">{Movie?.name || Movie?.title}</h1>
             <p className="mt-[8px] md:mt-[10px] text-xs md:text-sm max-w-[500px] text-gray-300 text-center w-[90%] md:w-[80%]">
               {Movie?.overview}
             </p>

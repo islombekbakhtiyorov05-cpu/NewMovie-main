@@ -5,7 +5,7 @@ import Casts from '../Components/Movie/Casts'
 import Movie_info from '../Components/Movie/Movie_info'
 import Banner from '../Components/Main/Banner'
 import Footer from '../Components/Main/Footer'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import Api_Service from '../Components/Service/Api_Service'
 const Movie_inside = () => {
 
@@ -18,10 +18,12 @@ useEffect(() => {
 }, [])
 
 const {id} = useParams();
+const location = useLocation()
 
 const getMovie = async () => {
-  const responce = await Api_Service .getData(`movie/${id}`)
-  const responce2 = await Api_Service.getData(`movie/${id}/credits`)
+  const type = location.pathname.startsWith('/tv') ? 'tv' : 'movie'
+  const responce = await Api_Service .getData(`${type}/${id}`)
+  const responce2 = await Api_Service.getData(`${type}/${id}/credits`)
   
  
 
@@ -32,8 +34,8 @@ const getMovie = async () => {
 }
 
 useEffect(() => {
-  getMovie()
-}, [])
+  getMovie(id)
+}, [id])
   return (
     <div>
       <Navbar2 />

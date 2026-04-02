@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Movie_info = ({Movie, Crew, Languages, Genres}) => {
+  console.log(Crew);
+  
   
   return (
     <div className="bg-[rgba(26,26,26,1)] p-[20px] md:p-[40px] rounded-[9px] w-full flex flex-col gap-[20px] md:gap-[30px]">
@@ -40,9 +42,9 @@ const Movie_info = ({Movie, Crew, Languages, Genres}) => {
       <div>
         <p className="text-[16px] md:text-[18px] text-[rgba(153,153,153,1)] font-medium">Director</p>
         <div className='flex gap-[10px] mt-[14px]'>
-          <div className='w-[48px] md:w-[56px] h-[52px] md:h-[60px] flex-shrink-0'><img className='w-full object-cover object-center h-full rounded-[9px]' src={`https://image.tmdb.org/t/p/w500/` + Crew?.find((c) => c.job==="Director").profile_path} alt="" /></div>
+          <div className='w-[48px] md:w-[56px] h-[52px] md:h-[60px] flex-shrink-0'><img className='w-full object-cover object-center h-full rounded-[9px]' src={`https://image.tmdb.org/t/p/w500/` + Crew?.find((c) => c.job==="Director" || Crew?.find((c) => c.job === "Executive Producer")).profile_path} alt="" /></div>
           <div>
-            <h1 className='text-[18px] md:text-[20px] text-white'>{Crew?.find((c) => c.job === "Director").name}</h1>
+            <h1 className='text-[18px] md:text-[20px] text-white'>{Crew?.find((c) => c.job === "Director" ||Crew?.find((c) => c.job === "Executive Producer"))?.name}</h1>
             <p className='text-[16px] md:text-[18px] text-[rgba(153,153,153,1)]'>From USA</p>
           </div>
         </div>

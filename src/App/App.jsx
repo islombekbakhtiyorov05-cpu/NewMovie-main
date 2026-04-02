@@ -19,6 +19,7 @@ function App() {
     <Route path='/subscription' element={<Subscription/>}/>
     <Route path='/movies' element={<Movies/>}/>
     <Route path='/movie/:id' element={<Movie_inside/>}/>
+    <Route path='/tv/:id' element={<Movie_inside/>}/> 
     <Route path='/register' element={<Sign_in/>}/>
     <Route path='/actor_info/:id' element={<Actor_info/>}/>
     <Route path='/search' element={<Searching/>}/>

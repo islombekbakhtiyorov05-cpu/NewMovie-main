@@ -94,7 +94,7 @@ const handleOpen = (id) => {
                     <SwiperSlide key={movie.id} onClick={() => handleOpen(movie.id)}>
                        
                         <div className='bg-[#1a1a1a] p-3 md:p-4 rounded-[12px] border border-[#262626]'>
-                            <div className='h-[200px] md:h-[350px] overflow-hidden rounded-[8px]'>
+                            <div className='h-[200px] md:h-[300px] overflow-hidden rounded-[8px]'>
                                 <img 
                                     className='object-cover w-full h-full hover:scale-105 transition-transform duration-300' 
                                     src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} 
