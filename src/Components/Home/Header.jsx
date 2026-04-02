@@ -20,7 +20,7 @@ const [staticMovies, setStaticMovies] = useState()
            
             <div className='mt-[60px] md:mt-[60px]'>
                 <img 
-                    src="/public/Abstract Design.png" 
+                    src="/Abstract Design.png" 
                     alt="" 
                     className='w-[200px] md:w-auto' 
                 />
